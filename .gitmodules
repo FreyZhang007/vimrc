@@ -1,0 +1,3 @@
+[submodule "pack/main/start/vim-monokai"]
+	path = pack/main/start/vim-monokai
+	url = https://github.com/crusoexia/vim-monokai.git
