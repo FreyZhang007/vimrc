@@ -1,3 +1,7 @@
 [submodule "pack/main/start/awesome-vim-colorschemes"]
 	path = pack/main/start/awesome-vim-colorschemes
 	url = https://github.com/rafi/awesome-vim-colorschemes.git
+[submodule "pack/main/start/coc-nvim"]
+	path = pack/main/start/coc-nvim
+	url = https://github.com/neoclide/coc.nvim.git
+	branch = release
