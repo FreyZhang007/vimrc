@@ -5,3 +5,9 @@
 	path = pack/main/start/coc-nvim
 	url = https://github.com/neoclide/coc.nvim.git
 	branch = release
+[submodule "pack/main/start/vim-airline"]
+	path = pack/main/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "pack/main/start/vim-airline-themes"]
+	path = pack/main/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
