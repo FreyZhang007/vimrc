@@ -11,3 +11,6 @@
 [submodule "pack/main/start/vim-airline-themes"]
 	path = pack/main/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "/home/frey/.vim/pack/plugins/start/lightline"]
+	path = /home/frey/.vim/pack/plugins/start/lightline
+	url = https://github.com/itchyny/lightline.vim
