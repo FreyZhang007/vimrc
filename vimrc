@@ -4,12 +4,21 @@ syntax enable
 "colorscheme
 set background=dark
 colorscheme solarized8_high
-set tabstop=2
+set tabstop=4
 set expandtab
+set vb t_vb=
 set number
-set signcolumn=number
+set norelativenumber
+set relativenumber
+set signcolumn=yes
+set mouse=a
+set foldmethod=indent
+set nofoldenable
+set autoindent
+set backspace=indent,eol,start
 
-" lightline
+"lightline
+set laststatus=2
 let g:lightline = {
   \ 'active': {
   \   'left': [
@@ -34,6 +43,9 @@ endfunction
 
 
 "coc
+let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets', 'coc-prettier', 'coc-pairs', 'coc-html', 'coc-highlight', 'coc-git', 'coc-eslint', 'coc-pyright', 'coc-json', 'coc-sh', 'coc-svg', 'coc-explorer', 'coc-clangd']
+"coc-explorer
+nmap <leader>e :CocCommand explorer<CR>
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8
@@ -170,6 +182,7 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
+noremap <F3> :Format<CR>
 
 " Add `:Fold` command to fold current buffer.
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
@@ -199,3 +212,43 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+"explorer
+function! s:explorer_cur_dir()
+  let node_info = CocAction('runCommand', 'explorer.getNodeInfo', 0)
+  return fnamemodify(node_info['fullpath'], ':h')
+endfunction
+
+function! s:exec_cur_dir(cmd)
+  let dir = s:explorer_cur_dir()
+  execute 'cd ' . dir
+  execute a:cmd
+endfunction
+
+function! s:init_explorer()
+  set winblend=10
+
+  " Integration with other plugins
+
+  " CocList
+  nnoremap <buffer> <Leader>fg :call <SID>exec_cur_dir('CocList -I grep')<CR>
+  nnoremap <buffer> <Leader>fG :call <SID>exec_cur_dir('CocList -I grep -regex')<CR>
+  nnoremap <buffer> <C-p> :call <SID>exec_cur_dir('CocList files')<CR>
+
+  " vim-floaterm
+  nnoremap <buffer> <Leader>ft :call <SID>exec_cur_dir('FloatermNew --wintype=floating')<CR>
+endfunction
+
+function! s:enter_explorer()
+  if &filetype == 'coc-explorer'
+    " statusline
+    setl statusline=coc-explorer
+  endif
+endfunction
+
+augroup CocExplorerCustom
+  autocmd!
+  autocmd BufEnter * call <SID>enter_explorer()
+  autocmd FileType coc-explorer call <SID>init_explorer()
+augroup END
+
