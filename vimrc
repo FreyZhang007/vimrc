@@ -1,5 +1,6 @@
 
 syntax enable
+filetype plugin indent on
 
 "colorscheme
 set background=dark
@@ -43,7 +44,22 @@ endfunction
 
 
 "coc
-let g:coc_global_extensions = ['coc-tsserver', 'coc-snippets', 'coc-prettier', 'coc-pairs', 'coc-html', 'coc-highlight', 'coc-git', 'coc-eslint', 'coc-pyright', 'coc-json', 'coc-sh', 'coc-svg', 'coc-explorer', 'coc-clangd']
+let g:coc_global_extensions = [
+                        \   'coc-tsserver', 
+                        \   'coc-pairs', 
+                        \   'coc-snippets', 
+                        \   'coc-prettier', 
+                        \   'coc-html', 
+                        \   'coc-highlight', 
+                        \   'coc-git', 
+                        \   'coc-eslint', 
+                        \   'coc-pyright', 
+                        \   'coc-json', 
+                        \   'coc-sh', 
+                        \   'coc-svg', 
+                        \   'coc-explorer', 
+                        \   'coc-clangd', 
+                        \   'coc-phpls']
 "coc-explorer
 nmap <leader>e :CocCommand explorer<CR>
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
