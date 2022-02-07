@@ -3,5 +3,6 @@
   "explorer.width": 30,
   "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd",
   "languageserver": {},
-  "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"]
+  "pairs.enableCharacters": ["(", "[", "{", "'", "\"", "`"],
+  "rust-analyzer.server.path":"~/.cargo/bin/rust-analyzer"
 }

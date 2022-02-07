@@ -59,7 +59,8 @@ let g:coc_global_extensions = [
                         \   'coc-svg', 
                         \   'coc-explorer', 
                         \   'coc-clangd', 
-                        \   'coc-phpls']
+                        \   'coc-phpls',
+                        \   'coc-rust-analyzer']
 "coc-explorer
 nmap <leader>e :CocCommand explorer<CR>
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
