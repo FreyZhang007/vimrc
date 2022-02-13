@@ -45,6 +45,9 @@ endfunction
 
 "coc
 let g:coc_global_extensions = [
+                        \   'coc-texlab',
+                        \   'coc-webview',
+                        \   'coc-markdown-preview-enhanced',
                         \   'coc-tsserver', 
                         \   'coc-pairs', 
                         \   'coc-snippets', 
