@@ -14,3 +14,6 @@
 [submodule "/home/frey/.vim/pack/plugins/start/lightline"]
 	path = /home/frey/.vim/pack/plugins/start/lightline
 	url = https://github.com/itchyny/lightline.vim
+[submodule "pack/main/start/lightline"]
+	path = pack/main/start/lightline
+	url = https://github.com/itchyny/lightline.vim
