@@ -1,6 +1,6 @@
 
 syntax enable
-filetype plugin indent on
+"filetype plugin indent on
 
 "colorscheme
 set background=dark
@@ -12,7 +12,7 @@ set number
 set norelativenumber
 set relativenumber
 set signcolumn=yes
-set mouse=a
+"set mouse=a
 set foldmethod=indent
 set nofoldenable
 set autoindent
