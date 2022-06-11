@@ -1,11 +1,12 @@
 
 syntax enable
-"filetype plugin indent on
+filetype plugin indent on
 
 "colorscheme
 set background=dark
 colorscheme solarized8_high
 set tabstop=4
+set softtabstop=4
 set expandtab
 set vb t_vb=
 set number

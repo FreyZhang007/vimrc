@@ -1,4 +1,4 @@
-
+set expandtab
 "Quick Run
 map <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
