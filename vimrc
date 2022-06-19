@@ -18,6 +18,8 @@ set foldmethod=indent
 set nofoldenable
 set autoindent
 set backspace=indent,eol,start
+set hlsearch
+set textwidth=500
 
 "lightline
 set laststatus=2
@@ -54,7 +56,6 @@ let g:coc_global_extensions = [
                         \   'coc-snippets', 
                         \   'coc-prettier', 
                         \   'coc-html', 
-                        \   'coc-highlight', 
                         \   'coc-git', 
                         \   'coc-eslint', 
                         \   'coc-pyright', 
