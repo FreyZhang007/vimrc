@@ -17,3 +17,6 @@
 [submodule "pack/main/start/lightline"]
 	path = pack/main/start/lightline
 	url = https://github.com/itchyny/lightline.vim
+[submodule "pack/main/start/vim-template"]
+	path = pack/main/start/vim-template
+	url = git@github.com:aperezdc/vim-template.git
